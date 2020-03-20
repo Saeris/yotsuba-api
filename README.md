@@ -1,4 +1,4 @@
-<h1 align="center" style="text-align: center;">Yotsuba API</h1>
+<h1 align="center" style="text-align: center;">🍀 Yotsuba API</h1>
 <p align="center">
   <a href="https://travis-ci.com/Saeris/yotsuba-api">
     <img src="https://travis-ci.com/Saeris/yotsuba-api.svg?branch=master" alt="Build Status" />
