@@ -1,4 +1,4 @@
-import { handler } from "../../lambda/mini-movie-db-api";
+import { handler } from "../../lambda/yotsuba-api";
 
 describe(`handler`, () => {
   it(`should be a function`, () => {
