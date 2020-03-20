@@ -1,0 +1,38 @@
+type Cooldowns {
+  images: Int
+  replies: Int
+  threads: Int
+}
+
+type Category {
+  id: ID!
+  boards: [Board]!
+  worksafe: Boolean!
+}
+
+type Board {
+  # General
+  id: ID!
+  title: String!
+  description: String!
+  category: Category!
+  pages: Int!
+  perPage: Int!
+  threads: [Thread]!
+
+  # Flags
+  worksafe: Boolean
+  spoilers: Boolean
+  anonymous: Boolean
+  userIDs: Boolean
+  countryFlags: Boolean
+
+  # Post Limits
+  bumpLimit: Int
+  imageLimit: Int
+  cooldowns: Cooldowns
+  charLimit: Int
+  filesizeLimit: Int
+  webmDurationLimit: Int
+  webmFilesizeLimit: Int
+}

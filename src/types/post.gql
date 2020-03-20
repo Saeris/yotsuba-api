@@ -1,0 +1,30 @@
+type Post {
+  id: ID!
+  isOp: Boolean!
+
+  # Author Details
+  author: String!
+  userID: String
+  title: String
+  tripcode: String
+
+  # Contents
+  subject: String
+  content: String
+  teaser(length: Int = 100): String
+
+  # Attachment
+  attachment: File
+
+  # Metadata
+  board: Board!
+  country: String
+  countryCode: String
+  thread: Thread!
+  quotes: [Post]!
+  timestamp: DateTime! @formatDate
+
+  # Flags
+  fileDeleted: Boolean!
+  spoiler: Boolean!
+}

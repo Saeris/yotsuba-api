@@ -1,0 +1,9 @@
+type Query {
+  banners: [Banner]!
+  boards: [Board]!
+  categories: [Category]!
+  page(board: ID!, number: Int!): [Thread]!
+  popular(boards: [ID]!): [Thread]!
+  thread(board: ID!, id: ID!): Thread!
+  threads(board: ID!): [Thread]!
+}

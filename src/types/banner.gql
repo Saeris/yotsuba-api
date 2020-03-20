@@ -1,0 +1,4 @@
+type Banner {
+  url: URL!
+  extension: String!
+}

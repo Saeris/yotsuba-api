@@ -1,0 +1,13 @@
+type File {
+  id: ID!
+  url: URL!
+  thumbnail: URL!
+  filename(full: Boolean = false): String!
+  extension: String!
+  filesize: Int! @convertBinary(originalUnit: bytes)
+  md5: String!
+  width: Int!
+  height: Int!
+  thumbnailWidth: Int!
+  thumbnailHeight: Int!
+}

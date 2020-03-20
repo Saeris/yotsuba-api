@@ -1,0 +1,17 @@
+type Thread {
+  id: ID!
+  topic: String
+  op: Post!
+  posts(latest: Boolean = false): [Post]!
+
+  # Metadata
+  images: Int
+  replies: Int
+  board: Board!
+  archivedOn: Int
+
+  # Flags
+  sticky: Boolean
+  closed: Boolean
+  archived: Boolean
+}
