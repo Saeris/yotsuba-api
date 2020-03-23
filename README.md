@@ -87,4 +87,4 @@ deploy:
 
 ## 🥂 License
 
-Released under the [MIT license](https://github.com/Saeris/Scryfall-API/blob/master/LICENSE.md).
+Released under the [MIT license](https://github.com/Saeris/yotsuba-api/blob/master/LICENSE.md).
