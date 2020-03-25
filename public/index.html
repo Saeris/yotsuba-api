@@ -679,15 +679,15 @@
 
     <div id="root" />
     <script type="text/javascript">
-      window.addEventListener("load", function(event) {
-        const loadingWrapper = document.getElementById("loading-wrapper")
-        loadingWrapper.classList.add("fadeOut")
+      window.addEventListener("load", function (event) {
+        const loadingWrapper = document.getElementById("loading-wrapper");
+        loadingWrapper.classList.add("fadeOut");
 
-        const root = document.getElementById("root")
-        root.classList.add("playgroundIn")
+        const root = document.getElementById("root");
+        root.classList.add("playgroundIn");
 
-        const { protocol, hostname } = window.location
-        const endpoint = `${protocol}//${hostname}/.netlify/functions/yotsuba-api/`
+        const { protocol, hostname } = window.location;
+        const endpoint = `${protocol}//${hostname}/.netlify/functions/yotsuba-api/`;
 
         GraphQLPlayground.init(root, {
           settings: {
@@ -872,7 +872,8 @@ fragment PostContent on Post {
               }`
             }
           ]
-        })
+        });
+      });
     </script>
   </body>
 </html>
