@@ -1,27 +1,23 @@
+import { extname } from "path";
 import fetch from "isomorphic-fetch";
 import { Resolver } from "./shared";
-import { range } from "../utils";
+import { any, range } from "../utils";
 
 export const banners: Resolver = async () => {
-  const images: { url: string; extension: string }[] = [];
-  await Promise.all(
+  const images = await Promise.all(
     range(249, 1).map(i =>
-      [`.gif`, `.jpg`, `.png`]
-        .map(ext =>
-          fetch(`http://s.4cdn.org/image/title/${i}${ext}`).then(res => {
-            if (res.ok) {
-              images.push({
-                url: `http://s.4cdn.org/image/title/${i}${ext}`,
-                extension: ext
-              });
-            }
-            return res;
-          })
+      // replace with Promise.any() once added to TypeScript
+      any(
+        [`.gif`, `.jpg`, `.png`].map(ext =>
+          fetch(`http://s.4cdn.org/image/title/${i}${ext}`)
         )
-        .flat()
+      )
     )
   );
-  return images;
+  return images.map(({ url }) => ({
+    url,
+    extension: extname(new URL(url).pathname)
+  }));
 };
 
 export const popular: Resolver = (_, { boards }, { dataSources }) =>
