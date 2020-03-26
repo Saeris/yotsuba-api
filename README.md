@@ -1,12 +1,5 @@
-<h1 align="center" style="text-align: center;">🍀 Yotsuba API</h1>
-<p align="center">
-  <a href="https://travis-ci.com/Saeris/yotsuba-api">
-    <img src="https://travis-ci.com/Saeris/yotsuba-api.svg?branch=master" alt="Build Status" />
-  </a>
-  <a href="https://codecov.io/gh/Saeris/yotsuba-api">
-    <img src="https://codecov.io/gh/Saeris/yotsuba-api/branch/master/graph/badge.svg" alt="Code Coverage"/>
-  </a>
-</p>
+<h1 align="center" style="display: block; text-align: center;">🍀 Yotsuba API</h1>
+<p align="center"><a href="https://travis-ci.com/Saeris/yotsuba-api"><img src="https://travis-ci.com/Saeris/yotsuba-api.svg?branch=master" alt="Build Status" /></a><a href="https://codecov.io/gh/Saeris/yotsuba-api"><img src="https://codecov.io/gh/Saeris/yotsuba-api/branch/master/graph/badge.svg" alt="Code Coverage"/></a></p>
 <p align="center">A GraphQL API wrapper for 4chan built with <a href="https://www.apollographql.com/docs/apollo-server/features/data-sources.html">Apollo Data Sources</a>.</p>
 
 ## 🛠️ Setup
@@ -23,6 +16,10 @@ Once that's done, you can now start up a development server using `yarn start`. 
 
 Lambda: http://localhost:1337/dev
 Netlify: http://localhost:1337/.netlify/functions/yotsuba-api
+
+## 🕹️ Demo
+
+You can try out the API using the GraphQL Playground hosted at https://yotsuba-api.saeris.io/.netlify/functions/yotsuba-api
 
 ## 🧪 Testing
 
