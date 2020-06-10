@@ -1,8 +1,6 @@
 module.exports = {
   plugins: [
-    ...(process.env.PIKA
-      ? [[require(`babel-plugin-import-graphql`), { runtime: true }]]
-      : []),
+    require(`babel-plugin-import-graphql`),
     require(`@babel/plugin-transform-runtime`),
     require(`@babel/plugin-proposal-class-properties`),
     require(`@babel/plugin-transform-object-assign`),
@@ -14,6 +12,7 @@ module.exports = {
       require(`@babel/preset-env`),
       {
         targets: { node: true },
+        modules: false,
         useBuiltIns: `usage`,
         corejs: 3,
         bugfixes: true

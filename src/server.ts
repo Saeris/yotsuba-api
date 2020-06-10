@@ -4,7 +4,7 @@ import { schema } from "./schema";
 import { dataSources } from "./sources";
 import { playground } from "./playground";
 
-export interface Context {
+interface Context {
   headers: APIGatewayEvent["headers"];
   functionName: LambdaContext["functionName"];
   event: APIGatewayEvent;
