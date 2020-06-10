@@ -1,7 +1,7 @@
 {
   "name": "@saeris/yotsuba-api",
   "description": "A GraphQL API wrapper for 4chan built with Apollo Data Sources",
-  "version": "1.0.0-rc",
+  "version": "1.0.0",
   "keywords": [
     "apollo",
     "graphql",
